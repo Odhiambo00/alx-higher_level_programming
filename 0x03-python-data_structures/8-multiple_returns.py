@@ -9,4 +9,3 @@ def multiple_returns(sentence):
     else:
         first = None
         return (length, first)
-
