@@ -12,8 +12,8 @@
 * A README.md file at the root of the repo, containing a description of the repository
 * A README.md file, at the root of the folder of this project, is mandatory
 * Code uses the pycodestyle (version 2.8.*)
-* All files must be executable
-* The length of your files will be tested using wc
+* All files must be executabl
+* The length of files will be tested using wc
 
 ### Shell Scripts
 * Allowed editors: vi, vim, emacs
