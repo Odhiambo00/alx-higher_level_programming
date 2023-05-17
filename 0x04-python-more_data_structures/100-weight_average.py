@@ -9,4 +9,3 @@ def weight_average(my_list=[]):
             bt += (tup[1])
         return (tp / bt)
     return 0
-
