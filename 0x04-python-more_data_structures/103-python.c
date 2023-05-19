@@ -16,7 +16,7 @@ void print_python_list(PyObject *p)
 	Py_ssize_t i;
 
 	printf("[.] bytes object info\n");
-	if (!PyBytes_check(p))
+	if (!PyBytes_Check(p))
 	{
 		printf(" [ERROR] Invalid Bytes Object\n");
 		return;
@@ -28,10 +28,7 @@ void print_python_list(PyObject *p)
 	{
 		unsigned char byte = string[i];
 
-		if (byte >= 0)
-			printf(" %02x", byte);
-		else
-			printf(" %02x", 256 + byte);
+		printf(" %02x", byte);
 	}
 	printf("\n");
 }
