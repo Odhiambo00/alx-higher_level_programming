@@ -2,12 +2,12 @@
 #include <Python.h>
 
 /**
- * print_python_list - prints bytes formation
+ * print_python_bytes - prints bytes formation
  * @p: Python Object
  * Return: no return
  */
 
-void print_python_list(PyObject *p)
+void print_python_bytes(PyObject *p)
 {
 	PyBytesObject *bytes = (PyBytesObject *)p;
 	char *string = PyBytes_AS_STRING(bytes);
