@@ -9,9 +9,9 @@ def magic_calculation(a, b):
                 continue
             else:
                 result += (a ** b) / i
-            except:
-                result = b + a
-                break
-            finally:
-                pass
-        return result
+        except:
+            result = b + a
+            break
+        finally:
+            pass
+    return result
