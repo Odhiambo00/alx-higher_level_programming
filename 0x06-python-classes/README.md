@@ -19,3 +19,8 @@
 * All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
 * All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
 * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+| Filename    | Description |
+| ----------- | ----------- |
+| [0-square.py](./0x06-python-classes/0-square.py) | class `Square` that defines a square |
+| [1-square.py](./0x06-python-classes/1-square.py) | class `Square` that defines a square by: (based on `0-square.py`).<br>Private instance attribute: `size`.<br>Instantiation with `size` (no type/value verification) |
