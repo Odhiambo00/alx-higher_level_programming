@@ -22,7 +22,7 @@
 
 | Filename    | Description |
 | ----------- | ----------- |
-| [0-square.py](./0x06-python-classes/0-square.py) | -class `Square` that defines a square |
+| [0-square.py](./0-square.py) | -class `Square` that defines a square |
 | [1-square.py](./0x06-python-classes/1-square.py) | -class `Square` that defines a square by: (based on `0-square.py`)<br>-Private instance attribute: `size`<br>-Instantiation with `size` (no type/value verification) |
 | [2-square.py](./0x06-python-classes/2-square.py) | -class `Square` that defines a square by: (based on `1-square.py`)<br>-Instantiation with optional `size`: `def __init__(self, size=0):`<br>-`size` must be an integer, otherwise raise a `TypeError` exception with the message `size must be an integer`<br>-if `size` is less than `0`, raise a `ValueError` exception with the message `size must be >= 0`
 | [3-square.py](./0x06-python-classes/3-square.py) |
