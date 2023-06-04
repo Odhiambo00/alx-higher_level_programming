@@ -1,0 +1,42 @@
+========================
+4-print_square.py module
+========================
+
+Usage of ``print_square(size)``
+===============================
+
+prints a square with the character #
+
+Import print_square from 4-print_square
+
+	>>> print_square = __import__('4-print_square').print_square
+
+	>>> print_square(1)
+	#
+
+Tests
+=====
+
+``size`` must be an integer
+
+	>>> print_square('69')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+``size`` must be greater than or equal 0
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Type-checking occurs before value-checking
+
+	>>> print_square(-1.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Fails if nothing is passed
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
