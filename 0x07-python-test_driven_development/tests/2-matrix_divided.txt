@@ -56,7 +56,7 @@ Invalid matrix elements
 
 All elements in ``matrix`` must be integers or floats
 
-	>>> matrix_divided([[1, 2, 3], [4, 'Alx', 5], 3)
+	>>> matrix_divided([[1, 2, 3], [4, 'Alx', 5]], 3)
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
