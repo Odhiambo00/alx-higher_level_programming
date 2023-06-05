@@ -84,7 +84,10 @@ class Rectangle:
         rectangle = ''
         for h in range(self.__height):
             for w in range(self.__width):
-                rectangle += '#'
+                try:
+                    rectangle += str(self.print_symbol)
+                except Exceeption:
+                    rectangle += type(self).print_symbol
             if h < self.__height - 1:
                 rectangle += '\n'
         return rectangle
@@ -101,5 +104,5 @@ class Rectangle:
         Prints a string message for every deletion
         """
 
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
