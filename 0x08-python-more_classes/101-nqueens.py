@@ -15,7 +15,7 @@ def init_board(n):
 
     board = []
     [board.append([]) for i in range(n)]
-    [row.append([]) for i in range(n) for row in board]
+    [row.append(' ') for i in range(n) for row in board]
     return board
 
 
@@ -60,14 +60,28 @@ def xout(board, row, col):
     # X out all spots above
     for r in range(row - 1, -1, -1):
         board[r][col] = 'x'
-    # X out all spots diagonally to the right
+    # X out all spots diagonally down to the right
+    c = col + 1
+    for r in range(row + 1, len(board)):
+        if c >= len(board):
+            break
+        board[r][c] = 'x'
+        c += 1
+    # X out all spots diagonally up to the left
+    c = col - 1
+    for r in range(row - 1, -1, -1):
+        if c < 0:
+            break
+        board[r][c]
+        c -= 1
+    # X out all spots diagonally up to the right
     c = col + 1
     for r in range(row - 1, -1, -1):
         if c >= len(board):
             break
         board[r][c] = 'x'
         c += 1
-    # X out all spots diagonally to the left
+    # X out all spots diagonally down to the left
     c = col - 1
     for r in range(row + 1, len(board)):
         if c < 0:
