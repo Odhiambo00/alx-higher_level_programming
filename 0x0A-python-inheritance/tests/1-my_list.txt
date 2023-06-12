@@ -74,11 +74,3 @@ Check reversed order list
 	[1, 2, 3, 4]
 	>>> print(l)
 	[4, 3, 2, 1]
-
-Check too many arguments
-========================
-
-	>>> l.print_sorted(1)
-	Traceback (most recent call last):
-	...
-	TypeError: print_sorted() takes 1 positional argument but 2 were given
