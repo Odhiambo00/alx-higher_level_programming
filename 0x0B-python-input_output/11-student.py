@@ -40,7 +40,5 @@ class Student:
         """
 
         for key in json:
-            try:
+            if key in self.__dict__:
                 setattr(self, key, json[key])
-            except:
-                pass
