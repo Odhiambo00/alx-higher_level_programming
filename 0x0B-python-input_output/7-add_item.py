@@ -4,27 +4,19 @@
 Defines a module that loads and saves
 """
 
+
 import sys
-import json
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-    load_from_json_file =\
-            __import__('6-load_from_json_file').load_from_json_file
 
-def add_item():
-    """
-    Adds arguments to python list
-    """
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-    try:
-    items = load_from_json_file('add_item.json')
-    except FileNotFoundError:
-        items = []
+arg_list = list(sys.argv[1:])
 
-    for args in sys.argv[1:]:
-        items.append(args)
+try:
+    old_data = load_from_json_file('add_item.json')
+except Exception:
+    old_data = []
 
-    save_to_json_file(items, 'add_item.json')
-
-add_item()
+old_data.extend(arg_list)
+save_to_json_file(old_data, 'add_item.json')
