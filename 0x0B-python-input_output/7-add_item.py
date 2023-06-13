@@ -12,10 +12,19 @@ if __name__ == "__main__":
     load_from_json_file =\
             __import__('6-load_from_json_file').load_from_json_file
 
+def add_item():
+    """
+    Adds arguments to python list
+    """
 
     try:
     items = load_from_json_file('add_item.json')
     except FileNotFoundError:
         items = []
-    items.extend(sys.argv[1:])
+
+    for args in sys.argv[1:]:
+        items.append(args)
+
     save_to_json_file(items, 'add_item.json')
+
+add_item()
