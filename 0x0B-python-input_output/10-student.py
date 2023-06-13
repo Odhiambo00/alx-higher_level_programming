@@ -24,14 +24,12 @@ class Student:
         Returns a dictionary representation of student instance
         """
 
-        try:
-            for attrs in attrs:
-                if type(attr) is not str:
-                    return self.__dict__
-        except Exception:
+        if attrs is None:
             return self.__dict__
-        new_dict = dict()
-        for key, value in self.__dict__.items():
-            if key in attrs:
-                new_dict[key] = value
+        new_dict = {}
+        for a in attrs:
+            try:
+                new_dict[a] = self.__dict__[a]
+            except:
+                pass
         return new_dict
