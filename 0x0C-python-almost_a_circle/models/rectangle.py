@@ -144,5 +144,10 @@ class Rectangle(Base):
         """
         Returns the dictionary representation of a Rectangle instance
         """
-
-
+        return {
+                'id': self.id,
+                'x': self.x,
+                'y': self.y,
+                'width': self.width,
+                'height': self.height,
+                }
