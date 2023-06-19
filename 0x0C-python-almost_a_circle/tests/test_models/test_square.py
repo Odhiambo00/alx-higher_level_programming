@@ -192,3 +192,6 @@ class TestSquare(unittest.TestCase):
         with redirect_stdout(buf):
             obj.display()
         self.assertEqual(buf.getvalue(), '\n\n\n  ##\n  ##\n')  # display
+
+if __name__ == "__main__":
+    unittest.main()
