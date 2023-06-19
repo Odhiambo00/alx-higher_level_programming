@@ -129,7 +129,7 @@ class Rectangle(Base):
         attributes = ['id', 'width', 'height', 'x', 'y']
 
         if len(args) > 0:
-            for attr in attriibutes:
+            for attr in attributes:
                 if i > len(args) - 1:
                     break
                 setattr(self, attr, args[i])
@@ -139,3 +139,10 @@ class Rectangle(Base):
                 if key not in attributes:
                     continue
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Rectangle instance
+        """
+
+
